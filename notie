@@ -1,0 +1,4 @@
+#!/bin/bash
+
+#start vim with date in filename
+vim ~/notes/$(date +%Y%m%d)-${1}.txt

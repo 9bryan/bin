@@ -1,0 +1,11 @@
+#!/bin/bash
+
+#Start centos docker
+#docker run -w /data -it --mount type=bind,src="$(pwd)",dst=/data --mount type=bind,src="$(cd ~/; pwd)",dst=/opt/home -p 0.0.0.0:80:8080/tcp centos /bin/bash -c "\
+#docker run -w /data -it -p 0.0.0.0:5432:5432/tcp --mount type=bind,src="$(pwd)",dst=/data --mount type=bind,src="$(cd ~/; pwd)",dst=/opt/home centos /bin/bash -c "\
+#        yum install epel-release -y && \
+#        yum install groff vim python-pip postgresql-server -y && \
+#        /bin/bash"
+#docker run -it --volume "$(pwd)":/data -p 0.0.0.0:80:8080/tcp centos bash
+
+docker run -e POSTGRES_PASSWORD=postgres -p 0.0.0.0:5432:5432/tcp -d postgres
