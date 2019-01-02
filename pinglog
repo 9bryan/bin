@@ -1,0 +1,4 @@
+#!/bin/bash
+
+#needs moreutils package for ts command
+ping $1 | ts '[%Y-%m-%d %H:%M:%S]' >> ~/ping.log
