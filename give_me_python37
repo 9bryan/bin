@@ -1,0 +1,13 @@
+#!/bin/bash
+
+#docker run --rm -w /data -it --mount type=bind,src="$(pwd)",dst=/data --mount type=bind,src="$(cd ~/; pwd)",dst=/opt/home python:3.7-stretch /bin/bash -c "\
+#        apt-get update -qy && \
+#        apt-get install -y python-dev python-pip && \
+#        cp -r /opt/home/.aws /root/ && \
+#        cp /opt/home/.vimrc /root/ && \
+#        /bin/bash"
+
+docker run --rm -w /data -it --mount type=bind,src="$(pwd)",dst=/data --mount type=bind,src="$(cd ~/; pwd)",dst=/opt/home python:3.7-stretch /bin/bash -c "\
+        apt-get update -qy && \
+        apt-get install -y python-dev python-pip && \
+        /bin/bash"
