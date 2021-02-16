@@ -1,0 +1,7 @@
+#!/bin/bash
+# To connect: open a web browser to http://localhost:6080
+# Might need some packages:  apt-get install gpg-agent wget lsb-core -y
+sudo docker run -p 6080:80 -v /dev/shm:/dev/shm dorowu/ubuntu-desktop-lxde-vnc --net=host &
+echo "#################################################"
+echo "#  Visit http://localhost:6080 in your browser  #
+echo "#################################################"
