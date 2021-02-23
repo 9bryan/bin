@@ -1,0 +1,2 @@
+#!/bin/bash
+for i in *.zip; do unzip $i -d ${i::-4}; done
